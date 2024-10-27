@@ -1,30 +1,42 @@
-.header{
-    height: 30vw;
-    margin: 5px auto;
+.header {
+    height:32vw;
+    margin: auto;
     background: url('/header_img.jpg') no-repeat;
-    background-size: contain;
-    position: relative;  
-    border-radius: 20px; 
+    background-size: cover; /* Ensure background covers entire container */
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden; /* Clips any overflow to show rounded corners */
 }
+
 
 .header-contents{
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 1.5vw;
+    gap: 1vw;
     /* max-width: 50%; */
     bottom: 10%;
     left: 4vw;
+    animation: fadeIn 3s;
 }
 
 .header-contents h1{
     color: white;
-    font-size: max(4vw, 25px);
-    font-weight: 700;
+    font-size: max(4vw, 30px);
+    font-weight: 600;
 
 }
 .header-contents p{
     color: white;
-    font-size: 1vw;
+    font-size: 1.5vw;
+}
+.header-contents button{
+    border: none;
+    color: #3a475a;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
 }

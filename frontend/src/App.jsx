@@ -7,7 +7,7 @@ import Home from './pages/Home/Home'
 
 const App = () => {
   return (
-    <div className='m-auto w-[80%]'>
+    <div className='m-auto w-[85%]'>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home />} />
