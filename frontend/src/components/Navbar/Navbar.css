@@ -17,11 +17,14 @@
     text-decoration: none;
     color: #3a475a; /* Equivalent to text-gray-600 */
     font-size: 18px;
+    margin-left: 70px;
+    align-items: center;
+    justify-content: center;
   }
   .navbar-right{
     align-items: center;
     display: flex;
-    gap: 40px;
+    gap: 30px;
   }
 
 .navbar button{
@@ -59,5 +62,9 @@
     border-radius: 5px;
     top: -8px;
     right: -8px;
+  }
 
+  .cute-boba{
+    width: 60px;
+    border-radius: 50%;
   }

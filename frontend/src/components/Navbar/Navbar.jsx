@@ -20,6 +20,9 @@ const Navbar = () => {
           <div className="dot"></div>
         </div>
         <button>sign in</button>
+        <div className="cute-boba">
+          <img src={assets.cute_boba} alt="" />
+        </div>
       </div>
     </div>
   )
