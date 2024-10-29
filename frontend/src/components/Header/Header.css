@@ -1,42 +1,85 @@
 .header {
-    height:32vw;
-    margin: auto;
-    background: url('/header_img.jpg') no-repeat;
-    background-size: cover; /* Ensure background covers entire container */
+    height: 34vw;
+    margin: 30px auto;
     position: relative;
-    border-radius: 20px;
-    overflow: hidden; /* Clips any overflow to show rounded corners */
+    overflow: hidden;
 }
 
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('.././../assets/header.jpg') no-repeat;
+    border-radius: 5%;
+    background-size: cover;
+    filter: blur(3px); /* Adjust blur intensity */
+    z-index: -1;
+    opacity: 1.6; /* Adjusted opacity for a softer effect */
+}
 
-.header-contents{
+.header-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 1vw;
-    /* max-width: 50%; */
+    align-items: flex-start; /* Changed to 'flex-start' for better alignment */
+    gap: 1.5vw;
+    max-width: 50%;
     bottom: 10%;
-    left: 4vw;
+    left: 6vw;
     animation: fadeIn 3s;
 }
 
-.header-contents h1{
+.header-contents h2 {
+    font-weight: 700; /* Increased weight for emphasis */
     color: white;
-    font-size: max(4vw, 30px);
-    font-weight: 600;
+    font-size: max(4.5vw, 22px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for better readability */
+}
 
-}
-.header-contents p{
+.header-contents p {
     color: white;
-    font-size: 1.5vw;
+    font-size: 1vw;
+    line-height: 1.5; /* Improved readability */
+    max-width: 90%; /* Limited width for better text flow */
 }
-.header-contents button{
+
+.header-contents a {
     border: none;
-    color: #3a475a;
+    color: #747474;
     font-weight: 500;
     padding: 1vw 2.3vw;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
     font-size: max(1vw, 13px);
     border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for hover effects */
+}
+
+.header-contents a:hover {
+    background: #ff5722; /* Accent color for hover */
+    color: white; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+@media (max-width: 1050px) {
+    .header {
+        height: 38vw;
+    }
+    .header-contents {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 750px) {
+    .header-contents {
+        max-width: 55%;
+    }
+    .header-contents p {
+        display: none; /* Keep this as per your original design */
+    }
+    .header-contents a {
+        padding: 2vw 4vw;
+    }
 }
