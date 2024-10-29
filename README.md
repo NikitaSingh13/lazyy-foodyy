@@ -6,6 +6,9 @@ lazyy-foodyy/
   └── frontend/
 ```
 
+#🛠️ Configuration
+MongoDB URL: Add your MongoDB URL in the config/db.js file.
+Environment Variables: Create a .env file in the backend directory and add the necessary environment variables.
 
 ## 📦 Installation
 
